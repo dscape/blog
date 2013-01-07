@@ -1,12 +1,15 @@
 {
-	"name": "blog",
-	"description": "a minimalist blog",
-	"version": "0.0.1",
-	"dependencies": {
-		"marked": "*",
-		"mime": "*",
-		"highlight.js": "*",
+  "name": "blog",
+  "subdomain": "dscape",
+  "description": "a minimalist blog",
+  "version": "0.0.1",
+  "dependencies": {
+    "marked": "*",
+    "mime": "*",
+    "natural": "*",
+    "highlight.js": "*",
         "cheerio": "*",
         "rss": "*"
-	}
+  },
+  "scripts": { "start" : "node server" }
 }

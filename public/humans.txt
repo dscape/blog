@@ -1,0 +1,11 @@
+/* TEAM */
+Your title: Nuno Job
+Site: nunojobpinto@gmail.com
+Twitter: dscape
+Location: Depends on the day
+
+/* THANKS */
+Name: Paolo Fragomeni (async.ly) from who I stole this site
+
+/* SITE */
+Software: Node, Nodejitsu. Check https://github.com/dscape/blog

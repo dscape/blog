@@ -5,7 +5,7 @@
 
 @font-face {
   font-family: 'museo_slab';
-  src: url('../../fonts/museo-slab/museo-slab-webfont.eot');
+  src: url('../../fonts/museo-slab/museo-slab.eot');
   src: url('../../fonts/museo-slab/museo-slab-webfont.eot?#iefix') format('embedded-opentype'),
        url('../../fonts/museo-slab/museo-slab-webfont.woff') format('woff'),
        url('../../fonts/museo-slab/museo-slab-webfont.ttf') format('truetype'),
@@ -15,19 +15,21 @@
 }
 
 @font-face {
-  font-family: 'ABeeZee';
+  font-family: 'Baskerville';
+  src: local('Baskerville'), local('Baskerville-Regular'),
+       url('../../fonts/baskerville/baskerville.woff') format('woff'),
+       url('../../fonts/baskerville/baskerville.ttf') format('truetype');
+  font-weight: normal;
   font-style: normal;
-  font-weight: 400;
-  src: local('ABeeZee'), local('ABeeZee-Regular'), url('../../fonts/ABeeZee/ABeeZee.woff') format('woff');
 }
 
 @font-face {
   font-family: 'FontAwesome';
   src: url('../../fonts/fontawesome/fontawesome-webfont.eot');
   src: url('../../fonts/fontawesome/fontawesome-webfont.eot?#iefix') format('eot'), 
-  	 	 url('../../fonts/fontawesome/fontawesome-webfont.woff') format('woff'), 
-  	 	 url('../../fonts/fontawesome/fontawesome-webfont.ttf') format('truetype'), 
-  	 	 url('../../fonts/fontawesome/fontawesome-webfont.svg#FontAwesome') format('svg');
+        url('../../fonts/fontawesome/fontawesome-webfont.woff') format('woff'), 
+        url('../../fonts/fontawesome/fontawesome-webfont.ttf') format('truetype'), 
+        url('../../fonts/fontawesome/fontawesome-webfont.svg#FontAwesome') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -38,67 +40,93 @@
  */
 
 body {
-	padding: 0px;
-	margin: 0px;
+  font-size: 24px;
+  padding: 0px;
+  margin: 0px;
+  background-color: #1a1a1a;
 }
 
 h1, h2, h3, h4, #side {
-	font-family: 'museo_slab';
-	color: #444;
+  font-family: 'museo_slab';
+  color: #bebebe;
 }
 
 h1, h2, h3, h4 {
-	margin-bottom: 40px;
+  margin-bottom: 40px;
 }
 
 h1 a {
-	position: relative;
+  position: relative;
 }
 
 h1 a:hover:before {
-	position: absolute;
-	top: 9px;
-	left: -30px;
-
-	content: "\f08d";
-	
-	font-family: 'FontAwesome';
+  position: absolute;
+  top: 6px;
+  left: -30px;
+  content: "☁";
+  font-family: 'FontAwesome';
   font-weight: normal;
   font-style: normal;
-  font-size: 25px;
+  font-size: 22px;
   display: inline-block;
   text-decoration: inherit;
 }
 
+h1 {
+  font-size: 1.5em;
+}
+
+h2 {
+  font-size: 1.3em;
+}
+
+h3 {
+  font-size: 1.2em;
+}
+
+h4 {
+  font-size: 1.1em;
+}
+
+h5, h6 {
+  font-size: 1em;
+}
+
+li {
+  color: #bebebe;
+  font-family: 'Baskerville', sans-serif;
+  line-height: 36px;
+}
+
 p {
-	color: rgba(0,0,0, .7);
-	font-family: 'ABeeZee', sans-serif;
-	line-height: 24px;
-	margin-bottom: 40px;
+  color: #bebebe;
+  font-family: 'Baskerville', sans-serif;
+  line-height: 36px;
+  margin-bottom: 40px;
 }
 
 a, a.visited, a.active, h1 a:hover {
-	text-decoration: none;
-	color: #b90000;
+  text-decoration: none;
+  color: #36f;
 }
 
 a:hover {
-	text-decoration: underline;
+  text-decoration: underline;
 }
 
 hr {
-	border: none;
-	border-top: 1px solid rgba(0,0,0, .1);
+  border: none;
+  border-top: 1px solid #222;
 }
 
 pre { 
-	border: 1px solid #e0ded3;
-	border-radius: 4px;
-	margin: 10px 10px 40px 10px;
-	padding: 10px;
-	background-color: #f0efe8;
-	overflow: auto;
-	font-size: 14px;
+  border: 1px solid #686868;
+  border-radius: 4px;
+  margin: 10px 10px 40px 10px;
+  padding: 10px;
+  background-color: #f0efe8;
+  overflow: auto;
+  font-size: 14px;
 }
 
 
@@ -113,7 +141,7 @@ code .string, code .regexp { color: green }
 code .class, code .special { color: #6089d4 }
 code .number               { color: red }
 code .comment              { color: grey }
-
+p code, li code { color: #ccc; font-size: 18px;}
 
 /* 
  * Sidebar
@@ -121,74 +149,53 @@ code .comment              { color: grey }
  */
 
 #side {
-	margin-left: 50px;
-	width: 181;
-	float: left;
-	margin-top: -30px;
-	text-align: center;
-	position: fixed;
+  margin-left: 50px;
+  width: 181;
+  float: left;
+  margin-top: -30px;
+  text-align: center;
+  position: fixed;
 }
 
 #bio {
-	margin-top: 40px;
-	font-size: 25px;
+  padding-top: 25px;
+  font-size: 25px;
 }
 
-#bio img {
-	opacity: 0.5;
+#bio a.social, #bio a:hover.social, #floating-head a.social, #floating-head a:hover.social {
+  font-family: 'FontAwesome';
+  font-size: 35px;
+  width: 25px;
+  height: 25px;
+  text-decoration: none;
 }
 
-#bio img:first-child {
-	margin-bottom: 10px;
+#bio #long {
+  width: 181px;
+  font-size: 12px;
+  margin-bottom: 2em;
 }
 
-#bio img:hover {
-	opacity: 1;
+#bio #long a {
+  font-size: 12px;
+  font-family: 'museo_slab';
 }
 
-#bio a, #bio a:hover, #floating-head a, #floating-head a:hover {
-	font-family: 'FontAwesome';
-	font-size: 35px;
-	width: 25px;
-	height: 25px;
-	text-decoration: none;
+#bio #long a:hover {
+  font-size: 12px;
+  font-family: 'museo_slab';
 }
 
 .github-link:after {
-	content: "\f092";
+  content: "\f092";
 }
 
 .twitter-link:after {
-	content: "\f081";
+  content: "\f081";
 }
 
-.linkedin-link:after {
-	content: "\f08c";
-}
-
-#ribbon {
-	position: relative;
-	padding-top: 40px;
-	height: 390px;
-	background-color: #b90000;
-	display: inline-block;
-	color: #ebead5;
-	line-height: 20px
-}
-
-#ribbon:after {
-	content: url("../img/rbnbtm.png");
-	position: absolute;
-	bottom: -5px;
-	left: 0px;
-	width: 181;
-	height: 153;
-	background: transparent;
-}
-
-#ribbon img {
-	margin: 13px;
-	margin-top: 50px;
+.resume-link:after {
+  content: "\f0c8";
 }
 
 #floating-head {
@@ -199,11 +206,9 @@ code .comment              { color: grey }
  * Content
  * -------
  */
-
-
 #articles {
-	margin-left: 280px;
-	margin-right: 50px;
+  margin-left: 280px;
+  margin-right: 50px;
   max-width: 700px;
 }
 
@@ -212,30 +217,34 @@ code .comment              { color: grey }
 }
 
 #toc {
-	padding: 100px 0;
-	font-family: 'museo_slab';
+  font-family: 'museo_slab';
+}
+
+#toc h1 {
+  margin-top: 0.67em;
 }
 
 #toc div {
-	border-bottom: 2px dotted rgba(0,0,0, .2);
-	height: 16px;
+  border-bottom: 2px dotted #bebebe;
+  height: 16px;
 }
 
 #toc .date {
-	float: right;
-	color: #808080;
-	display: inline-block;
-	background-color: #fff;
-	padding-top: 4px;
-	padding-left: 10px;
+  font-size: 16px;
+  float: right;
+  color: #bebebe;
+  display: inline-block;
+  background-color: #1a1a1a;
+  padding-top: 4px;
+  padding-left: 10px;
 }
 
 #toc div a {
-	font-size: 16px;
-	margin: 4px 0 4px;
-	display: inline-block;
-	background-color: #fff;
-	padding-right: 10px;
+  font-size: 16px;
+  margin: 4px 0 4px;
+  display: inline-block;
+  background-color: #1a1a1a;
+  padding-right: 10px;
 }
 
 /* 
@@ -261,7 +270,7 @@ only screen and (min-device-pixel-ratio : 1.5) {
   #floating-head {
     font-size: 25px;
     font-family: 'museo_slab';
-    background-color: #b90000;
+    background-color: #36f;
     display: block;
     position: relative;
     padding: 10px;
