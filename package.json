@@ -2,14 +2,23 @@
   "name": "blog",
   "subdomain": "dscape",
   "description": "a minimalist blog",
-  "version": "0.0.1",
+  "version": "0.0.1-2",
   "dependencies": {
     "marked": "*",
     "mime": "*",
     "natural": "*",
     "highlight.js": "*",
-        "cheerio": "*",
-        "rss": "*"
+    "cheerio": "*",
+    "rss": "*"
   },
-  "scripts": { "start" : "node server" }
+  "scripts": {
+    "start": "node server"
+  },
+  "domains": [
+    "nunojob.com",
+    "www.nunojob.com"
+  ],
+  "engines": {
+    "node": "0.8.x"
+  }
 }
