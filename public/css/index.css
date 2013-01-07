@@ -164,10 +164,19 @@ p code, li code { color: #ccc; font-size: 18px;}
 
 #bio a.social, #bio a:hover.social, #floating-head a.social, #floating-head a:hover.social {
   font-family: 'FontAwesome';
-  font-size: 35px;
-  width: 25px;
-  height: 25px;
+  font-size: 24px;
+  width: 20px;
+  height: 20px;
+  padding: 0 2px;
   text-decoration: none;
+  color: #bebebe;
+}
+#floating-head a.social, #floating-head a:hover.social {
+  color: #1a1a1a;
+}
+
+#bio a:hover.social {
+  color: #36f;
 }
 
 #bio #long {
@@ -187,15 +196,15 @@ p code, li code { color: #ccc; font-size: 18px;}
 }
 
 .github-link:after {
-  content: "\f092";
+  content: "\f113";
 }
 
 .twitter-link:after {
-  content: "\f081";
+  content: "\f099";
 }
 
 .resume-link:after {
-  content: "\f0c8";
+  content: "\f0f2";
 }
 
 #floating-head {
@@ -284,8 +293,6 @@ only screen and (min-device-pixel-ratio : 1.5) {
   }
 
   #floating-head a {
-    
     color: #ebead5;
-    margin: 0 10px 0;
   }
 }
