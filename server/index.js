@@ -280,7 +280,7 @@ http.createServer(function (req, res) {
           '<ul><li><a href="http://dscape.github.com' + req.url + '">',
           'http://writings.nunojob.com' + req.url + '</a></li></ul>',
           '</p>',
-          '<p>you can also go back to main and search right?</p>'].join('');
+          '<p>you can also go back to <a href="/">main</a> and search right?</p>'].join('');
         res.end(originalIndex.replace('<!-- content -->', msg));
       } else {
         console.log(500, pathname);
