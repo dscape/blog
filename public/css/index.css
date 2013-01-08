@@ -207,6 +207,10 @@ p code, li code { color: #ccc; font-size: 18px;}
   content: "\f0f2";
 }
 
+.rss-link:after {
+  content: "\f09e";
+}
+
 #floating-head {
   display: none;
 }
