@@ -2,7 +2,7 @@
   "name": "blog",
   "subdomain": "dscape",
   "description": "a minimalist blog",
-  "version": "0.0.1-2",
+  "version": "0.0.1-10",
   "dependencies": {
     "marked": "*",
     "mime": "*",
